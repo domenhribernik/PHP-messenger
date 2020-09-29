@@ -1,0 +1,171 @@
+body {
+  font-size: larger;
+  font-family: 'Poppins', sans-serif;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0px;
+  color:white;
+}
+.info h1{
+  display: inline-block;
+  font-size: 35px;
+  margin: 0px;
+  vertical-align: middle;
+}
+.homeicon {
+  font-size: 35px;
+  vertical-align: middle;
+  float: right;
+  margin-right: 15%;
+}
+main.container{
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  background-image: url("../image/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+nav.left-sidebar {
+  display: inline-block;
+  width: 50%;
+  min-width: 500px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.search-box {
+  display: inline-block;
+  width: 100%;
+  height: 15%;
+  padding-top: 3px;
+}
+.info, .search {
+  display: block;
+  height: 65%;
+  margin: 0;
+  padding: 0;
+}
+.info {
+  height: 70px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-left: 30px;
+}
+.link{
+  text-decoration: none;
+  float: right;
+  margin-right: 10px;
+}
+li.friends{
+  padding: 10px ;
+}
+li.friends:hover{
+  background-color: #000;
+}
+.search {
+  height: 57px;
+  margin: 0px 20px;
+  margin-bottom: 20px;
+}
+#search {
+  font-size: 30px;
+  color: white;
+}
+button.filter-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+}
+.search input {
+  position: relative;
+  width: 80%;
+  font-size: 1.2rem;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #eee;
+  color: black;
+  outline: none;
+}
+.friends-list {
+  display: inline-block;
+  width: 90%;
+  height: 85%;
+  margin-top: 10px;
+  overflow-y: auto;
+}
+img.profile-pic{
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+img.r-img {
+  border: 3px solid red;
+  box-sizing: border-box;
+}
+img.g-img {
+  border: 3px solid green;
+  box-sizing: border-box;
+}
+.friends-list ul {
+  margin-top: 5px;
+  padding: 0;
+}
+.friends-list li {
+  list-style-type: none;
+  margin: 0;
+}
+.friends-list div.friends-photo, .friends-list div.friends-name {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.addbutton {
+  float: right;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #5638A8, #AB1B73);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+.gradient {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 10px 25px;
+  width: 190px;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  background: #060c21;
+  border: solid 3px transparent;
+  border-image: linear-gradient( 30deg, #AB1B73, #5638A8);
+  border-image-slice: 1;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.gradient:hover {
+  background-image: linear-gradient(30deg, #AB1B73, #5638A8);
+  color: black;
+  text-shadow: 0 0 20px black;
+}
+.none {
+  display: none;
+}
