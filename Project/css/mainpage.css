@@ -424,12 +424,14 @@ img.sent-img:hover {
 .delete-chat {
   display: flex;
   vertical-align: middle;
+  text-align: center;
   margin: 20px 10px 20px 40px;
   position: relative;
   background: hsl(285, 70%, 50%);
+  line-height: 40px;
   border: none;
   color: white;
-  padding: 0px 10px !important;
+  padding: 0px 10px;
   height: 40px;
   font-size: 1.2rem;
   box-shadow: -6px 6px 0 hsl(285, 70%, 30%);

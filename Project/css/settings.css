@@ -225,6 +225,8 @@ button:hover span:nth-child(4){
   margin: 20px 10px 0 10px;
   position: relative;
   background: hsl(285, 70%, 50%);
+  text-align: center;
+  line-height: 50px;
   border: none;
   color: white;
   padding: 0px 24px;
