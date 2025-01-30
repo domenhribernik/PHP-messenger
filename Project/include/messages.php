@@ -94,31 +94,27 @@
     else if (strlen($msg) > 255) {
       echo "<script>alert('Your message was too long!')</script>";
     }
-    else {
-      $insert = "INSERT INTO users_chat(sender_username, receiver_username, msg_content, msg_status, msg_date) 
-      VALUES('$user_name', '$username', '$msg', 'unread', NOW())";
-      $run_insert = mysqli_query($db, $insert);
-    }
-    if ($msg_image != "") {
-      
+    else if ($msg_image != "") {  
       if ($FileType != "jpg" && $FileType != "png" && $FileType != "jpeg") {
         echo "<script>alert('Choose a format of .png or .jpg')</script>";
         echo "<script>window.open('main.php?user_name=$username', '_self')</script>";
-        $update = "UPDATE users_chat SET msg_content='error' ORDER BY msg_id DESC LIMIT 1";
-        $run_image = mysqli_query($db, $update);
       }
       else if ($_FILES["msg_photo"]["size"] > 1000000) {
         echo "<script>alert('Choose a photo smaller than 1MB')</script>";
         echo "<script>window.open('main.php?user_name=$username', '_self')</script>";
-        $update = "UPDATE users_chat SET msg_content='error' ORDER BY msg_id DESC LIMIT 1";
-        $run_image = mysqli_query($db, $update);
       }
       else {
         $image_upload = "message_image/$random_number$msg_image";
         move_uploaded_file($msg_tmp, $image_upload);
-        $update = "UPDATE users_chat SET msg_image='$image_upload' ORDER BY msg_id DESC LIMIT 1";
-        $run_image = mysqli_query($db, $update);
+        $insert = "INSERT INTO users_chat(sender_username, receiver_username, msg_content, msg_image, msg_status, msg_date) 
+        VALUES('$user_name', '$username', '$msg', '$image_upload', 'unread', NOW())";
+        $run_insert = mysqli_query($db, $insert);
       }
+    }
+    else {
+      $insert = "INSERT INTO users_chat(sender_username, receiver_username, msg_content, msg_status, msg_date) 
+      VALUES('$user_name', '$username', '$msg', 'unread', NOW())";
+      $run_insert = mysqli_query($db, $insert);
     }
     echo "<script>window.open('main.php?user_name=$username', '_self')</script>";
   }
